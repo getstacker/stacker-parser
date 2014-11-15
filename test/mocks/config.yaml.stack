@@ -1,0 +1,18 @@
+#!stacker """
+# No eco code is allowed in the header.
+# Just YAML.
+
+# output processed file to location relative to the file
+output: tmp/config.yaml
+
+# override config settings
+config:
+  nested:
+    var2: hello from the header
+"""
+
+var1: <%- "abcdef" %>
+var2: <%= @config.nested.var2 %>
+var3: <%= @config.var3 %>
+header:
+  output: <%= @header.output %>

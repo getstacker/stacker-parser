@@ -7,7 +7,10 @@ config:
 """
 
 #!stacker """
-????
+# Duplicate stacker header.
+# Should be treated as just a string and not parsed.
+config:
+  some: false
 """
 
 # Ini

@@ -1,0 +1,23 @@
+#!stacker """
+# No eco code is allowed in the header.
+# Just YAML.
+
+# output processed file to location relative to the file
+output: tmp/config.json
+
+# override config settings
+config:
+  nested:
+    var2: hello from the header
+"""
+
+// Comments are allowed in .stack files; hells yea!
+{
+  "var1": "<%- "abcdef" %>",
+  // Another comment
+  "var2": "<%= @config.nested.var2 %>",
+  "var3": "<%= @config.var3 %>",
+  "header": {
+    "output": "<%= @header.output %>"
+  }
+}
