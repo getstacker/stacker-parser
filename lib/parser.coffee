@@ -24,7 +24,10 @@ load = (filename, opts = {}) ->
   readFile path.normalize(filename), opts.encoding
 
 
-# @return [input, contents]  Input is the config object passed to the template.
+###*
+@return [contents, input]  Input is the config object passed to the template.
+                           Contents is the parsed output.
+###
 parse = (contents, opts = {}) ->
   [contents, header] = parseHeader contents
   cfg = {}
@@ -48,7 +51,7 @@ parse = (contents, opts = {}) ->
       contents
   catch err
     throw "Parse error [#{opts.filename}]: #{err.message}"
-  [input, contents]
+  [contents, input]
 
 
 # @return [contents, header]
