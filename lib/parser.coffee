@@ -26,7 +26,7 @@ load = (filename, opts = {}) ->
 
 # @return [input, contents]  Input is the config object passed to the template.
 parse = (contents, opts = {}) ->
-  [header, contents] = parseHeader contents
+  [contents, header] = parseHeader contents
   cfg = {}
   defaults cfg, header.config
   defaults cfg, opts.config or config.config
@@ -51,12 +51,13 @@ parse = (contents, opts = {}) ->
   [input, contents]
 
 
+# @return [contents, header]
 parseHeader = (contents) ->
   matches = contents.match /^#!stacker\s+"""\s+((.*\s+)+?)"""\s+((.*\s+)*)/m
-  return [{}, contents]  unless matches
+  return [contents, {}]  unless matches
   [tmp, header, tmp, contents] = matches
   header = yaml.safeLoad header
-  [header, contents]
+  [contents, header]
 
 
 module.exports =
