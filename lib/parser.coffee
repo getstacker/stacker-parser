@@ -42,6 +42,7 @@ parse = (contents, opts = {}) ->
     else if ext is '.json'
       # Strip comments
       contents = contents.replace /\s*\/\/.*/g, ''
+      contents = contents.replace /\s*\/\*[^\*]*\*\//m, ''
       JSON.parse contents
     else
       contents

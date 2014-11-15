@@ -16,6 +16,9 @@ config:
   "var1": "<%- "abcdef" %>",
   // Another comment
   "var2": "<%= @config.nested.var2 %>",
+  /*
+    Multiline comment
+  */
   "var3": "<%= @config.var3 %>",
   "header": {
     "output": "<%= @header.output %>"
