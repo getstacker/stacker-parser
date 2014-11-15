@@ -1,0 +1,18 @@
+#!stacker """
+isAwesome: most definitely
+config:
+  some:
+    nested: true
+    stuff: yep
+"""
+
+#!stacker """
+????
+"""
+
+# Ini
+var1 = 1
+var2 = true
+
+# Another comment
+var3 = abcd
