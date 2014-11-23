@@ -1,7 +1,7 @@
 # Load and parse .stacker template files
 
 yaml = require 'js-yaml'
-eco = require 'eco'
+EST = require 'stacker-est'
 Promise = require 'bluebird'
 readFile = Promise.promisify require('fs').readFile
 path = require 'path'
@@ -25,7 +25,7 @@ load = (filename, opts = {}) ->
 
 
 ###*
-Parse contents for stacker header, eco templates, yaml, and json.
+Parse contents for stacker header, est templates, yaml, and json.
 
 @param opts  All opts are optional.
        opts.filename: {String} filename used for parsing contents by file extension
@@ -47,8 +47,9 @@ parse = (contents, opts = {}) ->
       name: opts.filename
       ext: ext
       type: type
-  # Process eco template code, if any
-  contents = eco.render contents, input
+  # Process est template code, if any
+  renderer = new EST root: tpl: contents
+  contents = renderer.render 'tpl', input
   # By default, parse contents for supported file types
   unless opts.parse == false
     try

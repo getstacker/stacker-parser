@@ -65,9 +65,9 @@ describe 'parser', ->
       testYaml 'test.yaml.stacker'
 
     it 'does not parse contents', ->
-      contents = 'Some <%- "arbitrary" %> content with eco'
+      contents = 'Some <%- "arbitrary" %> content with est'
       [results, input] = parser.parse contents, parse: false
-      expect(results).to.equal 'Some arbitrary content with eco'
+      expect(results).to.equal 'Some arbitrary content with est'
 
   describe '#parseContents', ->
     it 'returns contents intact for non-supported file types', ->

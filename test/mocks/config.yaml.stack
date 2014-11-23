@@ -1,5 +1,5 @@
 #!stacker """
-# No eco code is allowed in the header.
+# No est code is allowed in the header.
 # Just YAML.
 
 # output processed file to location relative to the file
