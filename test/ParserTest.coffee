@@ -8,13 +8,13 @@ badFile = path.resolve __dirname, './.SOME_FILE_THAT_DOES_NOT_EXIST.yml'
 
 
 describe 'parser', ->
-  getMockFile = (filename) ->
-    path.resolve __dirname, './mocks', filename
+  fixture = (filename) ->
+    path.resolve __dirname, './fixtures', filename
 
   before ->
-    @configIni = getMockFile 'config.ini.stack'
-    @configYaml = getMockFile 'config.yaml.stack'
-    @configJson = getMockFile 'config.json.stack'
+    @configIni = fixture 'config.ini.stack'
+    @configYaml = fixture 'config.yaml.stack'
+    @configJson = fixture 'config.json.stack'
 
   describe '#load', ->
     it 'loads file using promises', ->
