@@ -1,0 +1,39 @@
+{
+  "name": "stacker-parser",
+  "version": "0.3.4",
+  "dependencies": {
+    "js-yaml": {
+      "version": "3.2.7",
+      "from": "js-yaml@3.2.7",
+      "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.2.7.tgz",
+      "dependencies": {
+        "argparse": {
+          "version": "1.0.1",
+          "from": "argparse@>=1.0.0 <1.1.0",
+          "resolved": "https://registry.npmjs.org/argparse/-/argparse-1.0.1.tgz",
+          "dependencies": {
+            "lodash": {
+              "version": "3.2.0",
+              "from": "lodash@>=3.2.0 <3.3.0",
+              "resolved": "https://registry.npmjs.org/lodash/-/lodash-3.2.0.tgz"
+            },
+            "sprintf-js": {
+              "version": "1.0.2",
+              "from": "sprintf-js@>=1.0.2 <1.1.0",
+              "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.2.tgz"
+            }
+          }
+        },
+        "esprima": {
+          "version": "2.0.0",
+          "from": "esprima@>=2.0.0 <2.1.0",
+          "resolved": "https://registry.npmjs.org/esprima/-/esprima-2.0.0.tgz"
+        }
+      }
+    },
+    "stacker-est": {
+      "version": "0.2.5",
+      "from": "stacker-est@0.2.5"
+    }
+  }
+}

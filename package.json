@@ -1,6 +1,6 @@
 {
   "name": "stacker-parser",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Stacker template file parser plugin",
   "main": "index.js",
   "engines": {
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/getstacker/stacker-parser",
   "dependencies": {
-    "co": "^4.4.0",
     "js-yaml": "^3.2.7",
     "stacker-est": "^0.2.5"
   },
