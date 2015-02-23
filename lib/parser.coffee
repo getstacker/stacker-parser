@@ -1,15 +1,16 @@
 # Load and parse .stacker template files
-
 yaml = require 'js-yaml'
 EST = require 'stacker-est'
-Promise = require 'bluebird'
-readFile = Promise.promisify require('fs').readFile
 path = require 'path'
-_ = require 'lodash'
-defaults = require('stacker-utils').object.deepDefaults
 
+# globals
 require 'stacker-globals'
-config = require 'config'
+_ = require 'stacker/_'
+config = require 'stacker/config'
+Promise = require 'stacker/promise'
+defaults = require('stacker/utils').object.deepDefaults
+
+readFile = Promise.promisify require('fs').readFile
 
 
 loadAndParse = (filename, opts = {}) ->
