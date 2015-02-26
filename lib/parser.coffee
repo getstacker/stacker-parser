@@ -4,10 +4,9 @@ EST = require 'stacker-est'
 path = require 'path'
 
 # globals
-require 'stacker-globals'
 _ = require 'stacker/_'
 config = require 'stacker/config'
-Promise = require 'stacker/promise'
+{Promise} = require 'stacker/promise'
 defaults = require('stacker/utils').object.deepDefaults
 
 readFile = Promise.promisify require('fs').readFile

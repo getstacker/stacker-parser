@@ -33,6 +33,6 @@
     "sinon": "^1.11.1",
     "sinon-chai": "^2.6.0",
     "chai-as-promised": "^4.1.1",
-    "stacker-globals": "^0.3.0"
+    "stacker-globals": "^0.3.5"
   }
 }
